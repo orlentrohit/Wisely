@@ -634,6 +634,7 @@ function SavingsPlanner() {
   const [goal, setGoal] = useState(300000);
   const [saved, setSaved] = useState(85000);
   const [months, setMonths] = useState(12);
+
   const remaining = Math.max(0, goal - saved);
   const monthly = months > 0 ? remaining / months : 0;
   const progress = goal > 0 ? Math.min(100, Math.round((saved / goal) * 100)) : 0;
@@ -664,6 +665,9 @@ function EmiPlanner() {
   const [principal, setPrincipal] = useState(800000);
   const [rate, setRate] = useState(9);
   const [months, setMonths] = useState(60);
+  
+  // NOTE: Agar niche kisi state mein default value string 'XXXXX' thi, toh use humne 0 ya safe initial dynamic numbers se replace kar diya hai:
+  const [processingFee, setProcessingFee] = useState(0);
   const [income, setIncome] = useState(100000);
   const monthlyRate = rate / 12 / 100;
   const emi =
