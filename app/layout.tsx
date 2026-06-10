@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/site-header";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(wisely.in),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: "Wisely - Monthly Budget, Grocery, Expense, and Savings Planner",
     template: "%s | Wisely"
