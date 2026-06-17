@@ -42,8 +42,19 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <Link
+            href="/login"
+            className="inline-flex h-9 items-center justify-center rounded-full border border-white/20 px-4 text-sm font-semibold text-slate-200 transition hover:bg-white/[0.08]"
+          >
+            Log in
+          </Link>
+          <Link
+            href="/signup"
+            className="inline-flex h-9 items-center justify-center rounded-full bg-orange-500 px-4 text-sm font-semibold text-white transition hover:bg-orange-400"
+          >
+            Sign up
+          </Link>
         </nav>
-
         <button
           type="button"
           aria-label={open ? "Close menu" : "Open menu"}
