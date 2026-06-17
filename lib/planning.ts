@@ -176,7 +176,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Free User",
     audience: "User",
-    price: "$0",
+    price: "Free",
     description: "For basic monthly, grocery, and fashion planning.",
     cta: "Start Free",
     href: "/dashboard",
@@ -191,7 +191,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Pro User",
     audience: "User",
-    price: "$9/mo",
+    price: "₹749/mo",
     description: "For advanced personal and household planning.",
     cta: "Upgrade Planning",
     href: "/pricing",
@@ -207,7 +207,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Shop Plan",
     audience: "Shop",
-    price: "$19/mo",
+    price: "₹1,599/mo",
     description: "For local shops that want visibility inside planning flows.",
     cta: "Join as Shop",
     href: "/seller-join",
@@ -222,7 +222,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Shop Pro",
     audience: "Shop",
-    price: "$39/mo",
+    price: "₹3,299/mo",
     description: "For sellers that need priority placement and more insights.",
     cta: "Get Priority",
     href: "/seller-join",
