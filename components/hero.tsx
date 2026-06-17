@@ -14,7 +14,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(124,58,237,0.22),transparent_32%,rgba(37,99,235,0.12)_62%,rgba(22,163,74,0.12))]" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-violet-400/60 to-transparent" />
 
-      <div className="relative mx-auto grid min-h-[calc(100svh-5rem)] max-w-[1600px] items-center gap-16 px-6 py-14 lg:grid-cols-[1fr_1.2fr] lg:px-12">
+      <div className="relative mx-auto grid max-w-[1600px] items-center gap-16 px-6 py-20 lg:grid-cols-[1fr_1.2fr] lg:px-12 lg:py-28">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-slate-200">
             <AppIcon name="ShieldCheck" className="h-4 w-4 text-green-300" />
