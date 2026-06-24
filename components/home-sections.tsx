@@ -89,7 +89,7 @@ export function PlanningCategories() {
             <Link key={item.title} href={item.href} className="rounded-lg border border-white/10 bg-white/[0.045] p-6 transition hover:-translate-y-1 hover:border-white/20">
               <AppIcon name={item.icon} className={`h-6 w-6 ${item.color}`} />
               <h3 className="mt-5 text-xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-400">{item.copy}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{item.copy}</p>
             </Link>
           ))}
         </div>
@@ -105,7 +105,7 @@ export function PlanningCategories() {
 
 export function FashionPlanningSection() {
   return (
-    <section className="bg-slate-900/50 py-20">
+    <section className="bg-gradient-to-b from-[#fff8fb] to-[#fdeef5] py-20">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <div>
           <SectionHeading
@@ -115,16 +115,16 @@ export function FashionPlanningSection() {
           />
           <Link
             href="/fashion-planner"
-            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-orange-500 px-6 text-sm font-semibold text-white transition hover:bg-orange-400"
+            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-orange-500 px-6 text-sm font-semibold text-slate-900 transition hover:bg-orange-400"
           >
             Open Fashion Planner
           </Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {["Monthly fashion budget", "Boys / girls / unisex", "Seasonal wardrobe", "Event-based planning", "Shopping list", "Nearby fashion stores"].map((item) => (
-            <article key={item} className="rounded-lg border border-pink-400/20 bg-pink-500/10 p-5">
+            <article key={item} className="rounded-2xl border border-pink-200 bg-white p-5 shadow-sm">
               <AppIcon name="Shirt" className="h-5 w-5 text-pink-200" />
-              <h3 className="mt-4 font-semibold text-white">{item}</h3>
+              <h3 className="mt-4 font-semibold text-slate-900">{item}</h3>
             </article>
           ))}
         </div>
@@ -139,9 +139,9 @@ export function GroceryPlanningSection() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
         <div className="grid gap-4 sm:grid-cols-2">
           {["Family size", "Country and city", "Weekly or monthly budget", "Manual price input", "Category-wise planning", "Nearby grocery stores"].map((item) => (
-            <article key={item} className="rounded-lg border border-green-400/20 bg-green-500/10 p-5">
+            <article key={item} className="rounded-2xl border border-green-200 bg-white p-5 shadow-sm">
               <AppIcon name="ShoppingBasket" className="h-5 w-5 text-green-200" />
-              <h3 className="mt-4 font-semibold text-white">{item}</h3>
+              <h3 className="mt-4 font-semibold text-slate-900">{item}</h3>
             </article>
           ))}
         </div>
@@ -153,7 +153,7 @@ export function GroceryPlanningSection() {
           />
           <Link
             href="/grocery-planner"
-            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-green-600 px-6 text-sm font-semibold text-white transition hover:bg-green-500"
+            className="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-green-600 px-6 text-sm font-semibold text-slate-900 transition hover:bg-green-500"
           >
             Open Grocery Planner
           </Link>
@@ -165,7 +165,7 @@ export function GroceryPlanningSection() {
 
 export function MapDiscoverySection() {
   return (
-    <section className="bg-slate-900/50 py-20">
+    <section className="bg-gradient-to-b from-[#f5faff] to-[#eaf4ff] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Map discovery"
@@ -182,26 +182,51 @@ export function MapDiscoverySection() {
 
 export function SellerJoinSection() {
   return (
-    <section className="bg-wisely-ink py-20">
+    <section className="bg-gradient-to-b from-[#fffdf8] to-[#f6f0df] py-20">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
         <SectionHeading
           eyebrow="Seller accounts"
           title="Give local shops visibility inside planning moments"
           description="Sellers can publish shop names, categories, city and country, product or service lists, contact details, offers, featured placements, and map location pins."
         />
+
         <div className="grid gap-4 sm:grid-cols-3">
           {featuredShops.slice(0, 3).map((shop) => (
-            <article key={shop.id} className="rounded-lg border border-white/10 bg-white/[0.045] p-5">
-              <AppIcon name={shop.category === "Fashion" ? "Shirt" : "ShoppingBasket"} className={shop.category === "Fashion" ? "h-5 w-5 text-pink-200" : "h-5 w-5 text-green-200"} />
-              <h3 className="mt-4 font-semibold text-white">{shop.shopName}</h3>
-              <p className="mt-2 text-sm text-slate-400">{shop.area}, {shop.city}</p>
-              <p className="mt-3 text-xs text-orange-200">{shop.offer}</p>
+            <article
+              key={shop.id}
+              className="rounded-2xl border border-[#eadfca] bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <AppIcon
+                name={
+                  shop.category === "Fashion"
+                    ? "Shirt"
+                    : "ShoppingBasket"
+                }
+                className={
+                  shop.category === "Fashion"
+                    ? "h-5 w-5 text-pink-500"
+                    : "h-5 w-5 text-green-600"
+                }
+              />
+
+              <h3 className="mt-4 font-semibold text-slate-900">
+                {shop.shopName}
+              </h3>
+
+              <p className="mt-2 text-sm text-slate-600">
+                {shop.area}, {shop.city}
+              </p>
+
+              <p className="mt-3 text-xs font-medium text-amber-700">
+                {shop.offer}
+              </p>
             </article>
           ))}
         </div>
+
         <Link
           href="/seller-join"
-          className="inline-flex h-12 w-fit items-center justify-center rounded-full bg-orange-500 px-6 text-sm font-semibold text-white transition hover:bg-orange-400 lg:col-start-2"
+          className="inline-flex h-12 w-fit items-center justify-center rounded-full bg-[#b8872b] px-6 text-sm font-semibold text-white transition hover:bg-[#9f7422] lg:col-start-2"
         >
           Join as Shop
         </Link>
@@ -212,7 +237,7 @@ export function SellerJoinSection() {
 
 export function SavedPlansSection() {
   return (
-    <section className="bg-slate-900/50 py-20">
+    <section className="bg-gradient-to-b from-[#fafafa] to-[#f3f4f6] py-20">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <SectionHeading
           eyebrow="Saved plans"
@@ -221,13 +246,13 @@ export function SavedPlansSection() {
         />
         <div className="grid gap-4">
           {savedPlans.map((plan) => (
-            <article key={plan.id} className="rounded-lg border border-white/10 bg-wisely-panel p-5">
+            <article key={plan.id} className="rounded-2xl border border-[#eadfca] bg-white p-5 shadow-sm">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <h3 className="font-semibold text-white">{plan.title}</h3>
-                  <p className="mt-1 text-sm text-slate-400">{plan.type} plan updated {plan.updatedAt}</p>
+                  <h3 className="font-semibold text-slate-900">{plan.title}</h3>
+                  <p className="mt-1 text-sm text-slate-600">{plan.type} plan updated {plan.updatedAt}</p>
                 </div>
-                <AppIcon name="Save" className="h-5 w-5 text-violet-200" />
+                <AppIcon name="Save" className="h-5 w-5 text-[#b8872b]" />
               </div>
             </article>
           ))}
@@ -239,7 +264,7 @@ export function SavedPlansSection() {
 
 export function PricingPreview() {
   return (
-    <section className="bg-wisely-ink py-20">
+    <section className="bg-gradient-to-b from-[#fffdf6] to-[#f6edd6] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading
@@ -247,7 +272,7 @@ export function PricingPreview() {
             title="Monetization for users and local shops"
             description="Wisely earns through shop subscriptions, featured listings, premium user planning, sponsored placement, and future premium analytics."
           />
-          <Link href="/pricing" className="inline-flex h-12 w-fit items-center justify-center rounded-full bg-orange-500 px-6 text-sm font-semibold text-white transition hover:bg-orange-400">
+          <Link href="/pricing" className="inline-flex h-12 w-fit items-center justify-center rounded-full bg-[#b8872b] px-6 text-sm font-semibold text-white transition hover:bg-[#9f7422]">
             View Pricing
           </Link>
         </div>
@@ -261,7 +286,7 @@ export function PricingPreview() {
 
 export function HomeFAQ() {
   return (
-    <section className="bg-slate-900/50 py-20">
+    <section className="bg-[#fffaf2] py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="FAQ"
@@ -271,9 +296,11 @@ export function HomeFAQ() {
         />
         <div className="mt-10 grid gap-4">
           {homepageFaqs.map((faq) => (
-            <article key={faq.question} className="rounded-lg border border-white/10 bg-white/[0.045] p-6">
-              <h3 className="font-semibold text-white">{faq.question}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-400">{faq.answer}</p>
+            <article
+  key={faq.question}
+  className="rounded-2xl border border-[#eadfca] bg-white p-6 shadow-sm">
+              <h3 className="font-semibold text-slate-900">{faq.question}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{faq.answer}</p>
             </article>
           ))}
         </div>
