@@ -19,7 +19,7 @@ const floatingTags = [
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#fbf8f1] text-slate-900">
+    <section className="relative isolate overflow-hidden bg-[#fffdf8] text-slate-900">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,205,112,0.28),transparent_28%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.95),transparent_24%),radial-gradient(circle_at_center,rgba(255,224,153,0.18),transparent_45%),linear-gradient(180deg,#fffef9_0%,#f8f3e8_100%)]" />
       <div className="absolute inset-0 opacity-[0.55] [background-image:linear-gradient(rgba(120,101,45,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(120,101,45,0.06)_1px,transparent_1px)] [background-size:64px_64px]" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/70 to-transparent" />
@@ -86,10 +86,10 @@ export function Hero() {
 
           {/* coin area */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative h-[340px] w-[340px] sm:h-[420px] sm:w-[420px]">
+            <div className="relative h-[380px] w-[380px] sm:h-[480px] sm:w-[480px]">
               <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(255,224,153,0.55)_0%,rgba(255,214,102,0.25)_38%,rgba(255,255,255,0)_70%)] blur-2xl" />
 
-              <div className="absolute inset-6 rounded-full border border-amber-200/70 bg-[radial-gradient(circle_at_30%_30%,#fff8d6_0%,#f5d46b_22%,#d9a72d_48%,#9b6a10_76%,#6f4a08_100%)] shadow-[inset_0_10px_25px_rgba(255,255,255,0.55),inset_0_-20px_35px_rgba(0,0,0,0.18),0_18px_55px_rgba(171,120,15,0.25)] animate-spin [animation-duration:18s] [animation-timing-function:linear] [animation-iteration-count:infinite]" />
+              <div className="absolute inset-6 rounded-full border border-amber-200/70 bg-[radial-gradient(circle_at_30%_30%,#fff8d6_0%,#f5d46b_22%,#d9a72d_48%,#9b6a10_76%,#6f4a08_100%)] shadow-[inset_0_10px_25px_rgba(255,255,255,0.55),inset_0_-20px_35px_rgba(0,0,0,0.18),0_18px_55px_rgba(171,120,15,0.25)] animate-spin [animation-duration:28s] [animation-timing-function:linear] [animation-iteration-count:infinite]" />
 
               <div className="absolute inset-14 rounded-full border border-white/60 bg-[radial-gradient(circle_at_32%_28%,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.32)_18%,rgba(255,255,255,0)_40%)] opacity-80" />
 
@@ -109,7 +109,7 @@ export function Hero() {
           </div>
 
           {/* dashboard card */}
-          <div className="absolute bottom-6 left-6 right-6 z-10 rounded-3xl border border-white/70 bg-white/85 p-5 shadow-[0_20px_70px_rgba(132,98,16,0.10)] backdrop-blur-xl">
+          <div className="absolute bottom-6 left-6 right-6 z-10 rounded-3xl border border-white/70 bg-white/92 p-5 shadow-[0_20px_70px_rgba(132,98,16,0.10)] backdrop-blur-xl">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4">
               <div>
                 <p className="text-sm font-semibold text-slate-950">June planning dashboard</p>
